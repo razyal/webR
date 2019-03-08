@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+  </style>
+  </head>
+  <body>
+  
+  <div class="topnav">
+    <a href="#about">About Me</a>
+    <a href="#photos">My Photos</a>
+    <a href="#playlist">My Playlist</a>
+    <a href="#like">Like</a>
+    <a href="#qrcoder">QR code</a>
+    <a href="#spa">Q&A</a>
+    <a href="#contact">Contact Me</a>
+  </div>
+  
+  </body>
+		  
+<section id="about" class="section">
+about me
+<br/>
+<br/>
+<br/>
+</section>
+
+<section id="photos" class="section">
+my photos
+<br/>
+<br/>
+<br/>
+</section>
+
+<section id="playlist" class="section">
+my playlist
+<br/>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lgeWjZ2KUsE" frameborder="0" 
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</section>
+
+<section id="like" class="section">
+give me a like
+<br/>
+<div class="fb-like" 
+    data-layout="standard" 
+    data-action="like" 
+    data-show-faces="true">
+  </div>
+<iframe 
+ width="450" height="80" style="border:none;overflow:hidden"
+ scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+<br/>
+<br/>
+</section>
+
+<section id="qrcoder" class="section">
+scan my code
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript">
+            function generateBarCode()
+            {
+                var nric = $('#text').val();
+                var url = 'C:\Users\Razi\Desktop\Additional Files\index.html';
+                $('#barcode').attr('src', url);
+            }
+</script>
+ <img id='barcode' 
+ src="C:\Users\Razi\Desktop\Additional Files\index.html" 
+ alt="" 
+ title="HELLO" 
+ width="500" 
+ height="500" />
+<br/>
+<br/>
+<br/>
+</section>
+
+<section id="spa" class="section">
+ans
+<br/>
+<br/>
+<br/>
+</section>
+
+<section id="contact" class="section">
+contact me
+<br/>
+<a href = "mailto:razyal@post.bgu.ac.il">Send me a mail </a>    
+<br/>
+<br/>
+</section>
+
+<script type="text/javascript">
+$(function(){
+  $("#nav a").click(function(e){
+    e.preventDefault();
+    $('html,body').scrollTo(this.hash,this.hash); 
+  });
+});
+</script>
+<script type="text/javascript">
+ $(document).scroll(function() {
+    $('#menu').toggle($(this).scrollTop()>1000)
+ });​
+ </script>
+</body>
+</html>
